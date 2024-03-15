@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booleans</title>
+</head>
+<body>
+  <script>
+    const age = 15;
+
+    if(age >= 16) {
+      console.log('You can drive')
+    } else if (age    >=14 ) {
+      console.log('Almost there!')
+    } else{
+      console.log('You can not drive')
+    };
+
+
+    const result = 0 ? 'truthy' : 'falsy';
+    console.log(result);
+    
+    false && console.log('hello');
+
+    const message = 5 && 'hello';
+    console.log(message)
+
+    const currency = undefined || 'USD';
+    console.log(currency)
+  </script>
+    
+</body>
+</html>
