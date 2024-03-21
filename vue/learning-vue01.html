@@ -7,7 +7,7 @@
   <script src="vue.js"> </script>
 </head>
 <body>
-  <div id='app'>
+  <div id='instancia'>
     <h1 v-bind:style = "{backgroundColor: corFundo}"> A cor do fundo é {{ corFundo}} </h1>
     <button v-on:click="trocaCor()"> Troca cor </button>
     <h1> Quantidade de click {{ click }}</h1>
@@ -18,9 +18,15 @@
 </html>
 
 <script>
+  //chamamos as funções do vue, para criar instancia
+  // e deixar reativo
   const { createApp, ref } = Vue
 
-  const app = createApp({
+  //instancia de aplicativo
+  const minhaInstancia = createApp({
+
+    //recurso chamado para ficar reativo, iremos colocar
+    // os atributos aqui dentro
     data(){
       return{ 
         corFundoOriginal: '#ff9012',
@@ -31,6 +37,7 @@
       }
     },
 
+    //criação de metódos para usar os atributos chamados
     methods:{
       trocaCor(){
           let aux = this.corFundo;
@@ -57,7 +64,8 @@
 
   });
 
-  app.mount('#app');
+  //no final terminamos fazendo a "montagem" da instancia
+  minhaInstancia.mount('#instancia');
 
 
 </script>
